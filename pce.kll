@@ -1,0 +1,83 @@
+Name = "pce";
+Layout = "Standard";
+Version = "1";
+Author = "Collin Eye";
+KLL = "0.3";
+Date = "2016-01-21";
+
+## Top Top Left
+U"3" : layerShift(3);
+U"4" : layerLock(3);
+
+## Top Left
+U"T" : U"Y";
+U"R" : U"P";
+U"E" : U"X";
+U"W" : U"V";
+U"BACKSLASH" : U"ESC";
+
+## Mid Left
+U"G" : U"I";
+U"F" : U"U";
+U"D" : U"E";
+U"S" : U"O";
+U"A" : U"A";
+U"TAB" : U"LSHIFT";
+
+## Small Thumb Left, clockwise starting top left
+U"LCTRL" : U"LALT";
+U"LALT" : U"LGUI";
+U"FUNCTION2" : U"LCTRL";
+
+U"HOME" : layerLatch(2);
+U"END" : layerLatch(1);
+
+## Big Thumb Left
+U"DELETE" : U"TAB";
+U"BACKSPACE" : U"BACKSPACE";
+
+## Bot Left
+U"B" : layerShift(2);
+U"V" : U"K";
+U"C" : U"J";
+U"X" : U"Q";
+U"Z" : U"Z";
+U"FUNCTION5" : layerShift(1);
+
+## Top Top Right
+U"8" : layerShift(3);
+U"7" : layerLock(3);
+
+## Top Right
+U"Y" : U"F";
+U"U" : U"G";
+U"I" : U"C";
+U"O" : U"R";
+U"RBRACE" : U"ESC";
+
+## Mid Right
+U"H" : U"D";
+U"J" : U"H";
+U"K" : U"T";
+U"L" : U"N";
+U"SEMICOLON" : U"S";
+U"QUOTE" : U"RSHIFT";
+
+## Right Thumb
+U"RALT" : U"RGUI";
+U"RCTRL" : U"RALT";
+U"FUNCTION7" : U"RCTRL";
+
+## Right Bot
+U"N" : layerShift(2);
+U"M" : U"M";
+U"COMMA" : U"W";
+U"PERIOD" : U"B";
+U"SLASH" : U"L";
+
+## Right Thumb
+U"PAGEUP" : layerLatch(1);
+U"PAGEDOWN" : layerLatch(2);
+U"ENTER" : U"ENTER";
+U"SPACE" : U"SPACE";
+U"LEFT" : layerShift(1);

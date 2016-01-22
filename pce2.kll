@@ -1,0 +1,35 @@
+Name = "pce2";
+Layout = "Standard";
+Version = "1";
+Author = "Collin Eye";
+KLL = "0.3";
+Date = "2016-01-21";
+
+## TOP LEFT
+U"T" : U"SLASH";
+U"R" : U"LSHIFT" + U"8";
+U"E" : U"MINUS";
+U"W" : U"LSHIFT" + U"EQUAL";
+
+## MID LEFT
+U"G" : U"5";
+U"F" : U"4";
+U"D" : U"3";
+U"S" : U"2";
+U"A" : U"1";
+
+# BOT LEFT
+U"V" : U"EQUAL";
+
+## TOP RIGHT
+U"Y" : U"LSHIFT" + U"6";
+U"U" : U"LSHIFT" + U"5";
+U"I" : U"LSHIFT" + U"COMMA";
+U"O" : U"LSHIFT" + U"PERIOD";
+
+## MID RIGHT
+U"H" : U"6";
+U"J" : U"7";
+U"K" : U"8";
+U"L" : U"9";
+U"SEMICOLON" : U"0";
