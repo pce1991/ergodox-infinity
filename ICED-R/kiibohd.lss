@@ -3,15 +3,15 @@ kiibohd.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         0000a210  00002000  00002000  00002000  2**2
+  0 .text         0000a284  00002000  00002000  00002000  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 .usbdescriptortable 00000120  1fff8000  1fff8000  00018000  2**2
                   ALLOC
   2 .usbbuffers   00000870  1fff8120  1fff8120  00018000  2**0
                   ALLOC
-  3 .data         00000904  1fff8990  0000c210  00010990  2**2
+  3 .data         00000904  1fff8990  0000c284  00010990  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  4 .bss          000013c4  1fff9294  0000cb14  00011294  2**2
+  4 .bss          000013c4  1fff9294  0000cb88  00011294  2**2
                   ALLOC
   5 .debug_info   00010bf8  00000000  00000000  00011294  2**0
                   CONTENTS, READONLY, DEBUGGING
@@ -21,19 +21,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   8 .debug_ranges 00000bc0  00000000  00000000  00024fd0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_macro  00009812  00000000  00000000  00025b90  2**0
+  9 .debug_macro  0000979c  00000000  00000000  00025b90  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_line   000049ba  00000000  00000000  0002f3a2  2**0
+ 10 .debug_line   000049ba  00000000  00000000  0002f32c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_str    000242c3  00000000  00000000  00033d5c  2**0
+ 11 .debug_str    0002444d  00000000  00000000  00033ce6  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .comment      0000001f  00000000  00000000  0005801f  2**0
+ 12 .comment      0000001f  00000000  00000000  00058133  2**0
                   CONTENTS, READONLY
- 13 .ARM.attributes 00000033  00000000  00000000  0005803e  2**0
+ 13 .ARM.attributes 00000033  00000000  00000000  00058152  2**0
                   CONTENTS, READONLY
- 14 .debug_frame  00001554  00000000  00000000  00058074  2**2
+ 14 .debug_frame  00001554  00000000  00000000  00058188  2**2
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_loc    000070f3  00000000  00000000  000595c8  2**0
+ 15 .debug_loc    000070f3  00000000  00000000  000596dc  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -324,7 +324,7 @@ void ResetHandler()
     22c0:	4007d002 	.word	0x4007d002
     22c4:	1fff8990 	.word	0x1fff8990
     22c8:	1fff9294 	.word	0x1fff9294
-    22cc:	0000c210 	.word	0x0000c210
+    22cc:	0000c284 	.word	0x0000c284
     22d0:	1fff9294 	.word	0x1fff9294
     22d4:	1fffa658 	.word	0x1fffa658
     22d8:	e000e400 	.word	0xe000e400
@@ -18246,17 +18246,17 @@ void cliFunc_version( char* args )
     71ec:	0000bc19 	.word	0x0000bc19
     71f0:	0000bc5c 	.word	0x0000bc5c
     71f4:	0000bc7d 	.word	0x0000bc7d
-    71f8:	0000bcd0 	.word	0x0000bcd0
-    71fc:	0000bd14 	.word	0x0000bd14
-    7200:	0000bd48 	.word	0x0000bd48
-    7204:	0000bd9b 	.word	0x0000bd9b
-    7208:	0000bdcf 	.word	0x0000bdcf
-    720c:	0000be01 	.word	0x0000be01
-    7210:	0000be1f 	.word	0x0000be1f
-    7214:	0000be47 	.word	0x0000be47
-    7218:	0000be6b 	.word	0x0000be6b
-    721c:	0000be8e 	.word	0x0000be8e
-    7220:	0000bee4 	.word	0x0000bee4
+    71f8:	0000bd61 	.word	0x0000bd61
+    71fc:	0000bda5 	.word	0x0000bda5
+    7200:	0000bdd9 	.word	0x0000bdd9
+    7204:	0000be0f 	.word	0x0000be0f
+    7208:	0000be43 	.word	0x0000be43
+    720c:	0000be75 	.word	0x0000be75
+    7210:	0000be93 	.word	0x0000be93
+    7214:	0000bebb 	.word	0x0000bebb
+    7218:	0000bedf 	.word	0x0000bedf
+    721c:	0000bf02 	.word	0x0000bf02
+    7220:	0000bf58 	.word	0x0000bf58
     7224:	40048054 	.word	0x40048054
     7228:	40048058 	.word	0x40048058
     722c:	4004805c 	.word	0x4004805c
@@ -18307,8 +18307,8 @@ void cliFunc_cliDebug( char* args )
     725a:	bd10      	pop	{r4, pc}
     725c:	1fff9624 	.word	0x1fff9624
     7260:	0000bae3 	.word	0x0000bae3
-    7264:	0000befd 	.word	0x0000befd
-    7268:	0000bf2c 	.word	0x0000bf2c
+    7264:	0000bf71 	.word	0x0000bf71
+    7268:	0000bfa0 	.word	0x0000bfa0
 
 0000726c <CLI_saveHistory.part.1>:
         while (*cursor == ' ') { cursor++; } // advance past the leading whitespace
@@ -18541,13 +18541,13 @@ void CLI_commandLookup()
     7360:	1fff9a78 	.word	0x1fff9a78
     7364:	0000bae3 	.word	0x0000bae3
     7368:	00008fb8 	.word	0x00008fb8
-    736c:	0000bf6a 	.word	0x0000bf6a
-    7370:	0000bf6c 	.word	0x0000bf6c
-    7374:	0000bf5a 	.word	0x0000bf5a
+    736c:	0000bfde 	.word	0x0000bfde
+    7370:	0000bfe0 	.word	0x0000bfe0
+    7374:	0000bfce 	.word	0x0000bfce
     7378:	0000bb2c 	.word	0x0000bb2c
-    737c:	0000bf5d 	.word	0x0000bf5d
+    737c:	0000bfd1 	.word	0x0000bfd1
     7380:	000095e2 	.word	0x000095e2
-    7384:	0000bf64 	.word	0x0000bf64
+    7384:	0000bfd8 	.word	0x0000bfd8
 
 00007388 <CLI_registerDictionary>:
 
@@ -18593,7 +18593,7 @@ void CLI_registerDictionary( const CLIDictItem *cmdDict, const char* dictName )
     73ac:	bd10      	pop	{r4, pc}
     73ae:	bf00      	nop
     73b0:	1fff9627 	.word	0x1fff9627
-    73b4:	0000bf9a 	.word	0x0000bf9a
+    73b4:	0000c00e 	.word	0x0000c00e
     73b8:	1fff9aa4 	.word	0x1fff9aa4
     73bc:	1fff9a78 	.word	0x1fff9a78
 
@@ -18678,14 +18678,14 @@ inline void prompt()
     73f8:	bd10      	pop	{r4, pc}
     73fa:	bf00      	nop
     73fc:	1fff9acc 	.word	0x1fff9acc
-    7400:	0000bfdf 	.word	0x0000bfdf
+    7400:	0000c053 	.word	0x0000c053
     7404:	1fff9a75 	.word	0x1fff9a75
     7408:	1fff9625 	.word	0x1fff9625
     740c:	1fff9aa0 	.word	0x1fff9aa0
-    7410:	0000bfe5 	.word	0x0000bfe5
+    7410:	0000c059 	.word	0x0000c059
     7414:	1fff9627 	.word	0x1fff9627
-    7418:	0000c0c0 	.word	0x0000c0c0
-    741c:	0000c1c2 	.word	0x0000c1c2
+    7418:	0000c134 	.word	0x0000c134
+    741c:	0000c236 	.word	0x0000c236
     7420:	1fff9626 	.word	0x1fff9626
     7424:	1fff9624 	.word	0x1fff9624
 
@@ -18878,8 +18878,8 @@ inline void prompt()
     74d0:	1fff9acc 	.word	0x1fff9acc
     74d4:	1fff9a10 	.word	0x1fff9a10
     74d8:	1fff9627 	.word	0x1fff9627
-    74dc:	0000bfdf 	.word	0x0000bfdf
-    74e0:	0000bfe5 	.word	0x0000bfe5
+    74dc:	0000c053 	.word	0x0000c053
+    74e0:	0000c059 	.word	0x0000c059
     74e4:	1fff9a78 	.word	0x1fff9a78
 
 000074e8 <CLI_wrap>:
@@ -19032,8 +19032,8 @@ inline void prompt()
     756e:	bd70      	pop	{r4, r5, r6, pc}
     7570:	1fff9628 	.word	0x1fff9628
     7574:	1fff9acc 	.word	0x1fff9acc
-    7578:	0000bfdf 	.word	0x0000bfdf
-    757c:	0000bfe5 	.word	0x0000bfe5
+    7578:	0000c053 	.word	0x0000c053
+    757c:	0000c059 	.word	0x0000c059
     7580:	1fff9a10 	.word	0x1fff9a10
 
 00007584 <CLI_process>:
@@ -19546,16 +19546,16 @@ inline void CLI_saveHistory( char *buff )
     7756:	bf00      	nop
     7758:	1fff9acc 	.word	0x1fff9acc
     775c:	0000bae3 	.word	0x0000bae3
-    7760:	0000bff3 	.word	0x0000bff3
+    7760:	0000c067 	.word	0x0000c067
     7764:	1fff9a10 	.word	0x1fff9a10
     7768:	1fff9624 	.word	0x1fff9624
-    776c:	0000c04a 	.word	0x0000c04a
-    7770:	0000c050 	.word	0x0000c050
+    776c:	0000c0be 	.word	0x0000c0be
+    7770:	0000c0c4 	.word	0x0000c0c4
     7774:	00008156 	.word	0x00008156
-    7778:	0000c055 	.word	0x0000c055
-    777c:	0000bfdf 	.word	0x0000bfdf
-    7780:	0000bfe5 	.word	0x0000bfe5
-    7784:	0000c059 	.word	0x0000c059
+    7778:	0000c0c9 	.word	0x0000c0c9
+    777c:	0000c053 	.word	0x0000c053
+    7780:	0000c059 	.word	0x0000c059
+    7784:	0000c0cd 	.word	0x0000c0cd
     7788:	1fff9aa0 	.word	0x1fff9aa0
     778c:	1fff9a75 	.word	0x1fff9a75
     7790:	1fff9625 	.word	0x1fff9625
@@ -21561,7 +21561,7 @@ int numToInt( char* in )
     a34a:	01 00 01 3b 00                                      ...;.
 
 0000a34f <rm26_guide>:
-    a34f:	01 03 01 00 00                                      .....
+    a34f:	01 04 02 00 00                                      .....
 
 0000a354 <tm73_guide>:
     a354:	01 00 01 32 00                                      ...2.
@@ -21684,10 +21684,10 @@ int numToInt( char* in )
     a510:	8c 9d 00 00 18 00 00 00 20 ad 00 00 07 00 00 00     ........ .......
     a520:	2a ad 00 00 19 00 00 00 9f a1 00 00 1a 00 00 00     *...............
     a530:	88 a1 00 00 1b 00 00 00 04 ac 00 00 1c 00 00 00     ................
-    a540:	1d a4 00 00 1d 00 00 00 36 ae 00 00 1e 00 00 00     ........6.......
+    a540:	1d a4 00 00 1d 00 00 00 36 ae 00 00 1a 00 00 00     ........6.......
     a550:	a8 a8 00 00 1e 00 00 00 49 b2 00 00 1f 00 00 00     ........I.......
     a560:	c1 aa 00 00 20 00 00 00 f1 9b 00 00 21 00 00 00     .... .......!...
-    a570:	8f ac 00 00 1a 00 00 00 2c a1 00 00 22 00 00 00     ........,..."...
+    a570:	8f ac 00 00 1e 00 00 00 2c a1 00 00 22 00 00 00     ........,..."...
     a580:	f5 ab 00 00 23 00 00 00 72 9b 00 00 24 00 00 00     ....#...r...$...
     a590:	08 ae 00 00 15 00 00 00 3d b0 00 00 25 00 00 00     ........=...%...
     a5a0:	92 ad 00 00 26 00 00 00 5d a3 00 00 12 00 00 00     ....&...].......
@@ -22209,7 +22209,7 @@ int numToInt( char* in )
     acb0:	01 00 01 1b 00                                      .....
 
 0000acb5 <rm30_guide>:
-    acb5:	01 03 02 00 00                                      .....
+    acb5:	01 03 01 00 00                                      .....
 
 0000acba <rm82_guide>:
     acba:	01 0e 33 00 00 00                                   ..3...
@@ -23029,110 +23029,117 @@ int numToInt( char* in )
     bbfc:	0d 00 1b 63 00 0d 0a 1b 5b 31 3b 33 32 6d 00 1b     ...c....[1;32m..
     bc0c:	5b 30 6d 0d 0a 00 20 1b 5b 33 35 6d 00 20 1b 5b     [0m... .[35m. .[
     bc1c:	31 6d 52 65 76 69 73 69 6f 6e 3a 1b 5b 30 6d 20     1mRevision:.[0m 
-    bc2c:	20 20 20 20 20 35 32 63 38 66 66 63 39 36 34 63          52c8ffc964c
-    bc3c:	32 30 62 32 30 63 36 62 38 65 36 61 33 62 32 38     20b20c6b8e6a3b28
-    bc4c:	65 61 63 36 32 63 35 64 35 33 32 36 62 0d 0a 00     eac62c5d5326b...
+    bc2c:	20 20 20 20 20 35 65 30 32 61 34 62 35 32 66 36          5e02a4b52f6
+    bc3c:	63 65 34 33 39 39 66 35 64 39 39 61 31 66 61 34     ce4399f5d99a1fa4
+    bc4c:	63 66 63 66 36 36 63 62 32 38 31 31 30 0d 0a 00     cfcf66cb28110...
     bc5c:	20 1b 5b 31 6d 42 72 61 6e 63 68 3a 1b 5b 30 6d      .[1mBranch:.[0m
     bc6c:	20 20 20 20 20 20 20 20 6d 61 73 74 65 72 0d 0a             master..
     bc7c:	00 20 1b 5b 31 6d 54 72 65 65 20 53 74 61 74 75     . .[1mTree Statu
     bc8c:	73 3a 1b 5b 30 6d 20 20 20 44 69 72 74 79 0d 0a     s:.[0m   Dirty..
-    bc9c:	09 4b 65 79 62 6f 61 72 64 73 2f 65 72 67 6f 64     .Keyboards/ergod
-    bcac:	6f 78 2e 62 61 73 68 0d 0a 09 4b 65 79 62 6f 61     ox.bash...Keyboa
-    bcbc:	72 64 73 2f 69 6e 66 69 6e 69 74 79 2e 62 61 73     rds/infinity.bas
-    bccc:	68 0d 0a 00 20 1b 5b 31 6d 52 65 70 6f 20 4f 72     h... .[1mRepo Or
-    bcdc:	69 67 69 6e 3a 1b 5b 30 6d 20 20 20 68 74 74 70     igin:.[0m   http
-    bcec:	73 3a 2f 2f 67 69 74 68 75 62 2e 63 6f 6d 2f 6b     s://github.com/k
-    bcfc:	69 69 62 6f 68 64 2f 63 6f 6e 74 72 6f 6c 6c 65     iibohd/controlle
-    bd0c:	72 2e 67 69 74 0d 0a 00 20 1b 5b 31 6d 43 6f 6d     r.git... .[1mCom
-    bd1c:	6d 69 74 20 44 61 74 65 3a 1b 5b 30 6d 20 20 20     mit Date:.[0m   
-    bd2c:	32 30 31 36 2d 30 31 2d 31 33 20 31 35 3a 30 34     2016-01-13 15:04
-    bd3c:	3a 34 35 20 2d 30 38 30 30 0d 0a 00 20 1b 5b 31     :45 -0800... .[1
-    bd4c:	6d 43 6f 6d 6d 69 74 20 41 75 74 68 6f 72 3a 1b     mCommit Author:.
-    bd5c:	5b 30 6d 20 4a 61 63 6f 62 20 41 6c 65 78 61 6e     [0m Jacob Alexan
-    bd6c:	64 65 72 20 3c 6a 61 63 6f 62 2e 61 6c 65 78 61     der <jacob.alexa
-    bd7c:	6e 64 65 72 40 76 69 72 74 75 61 6c 69 6e 73 74     nder@virtualinst
-    bd8c:	72 75 6d 65 6e 74 73 2e 63 6f 6d 3e 0d 0a 00 20     ruments.com>... 
-    bd9c:	1b 5b 31 6d 42 75 69 6c 64 20 44 61 74 65 3a 1b     .[1mBuild Date:.
-    bdac:	5b 30 6d 20 20 20 20 32 30 31 36 2d 30 31 2d 32     [0m    2016-01-2
-    bdbc:	32 20 31 35 3a 35 38 3a 35 35 20 2d 30 36 30 30     2 15:58:55 -0600
-    bdcc:	0d 0a 00 20 1b 5b 31 6d 42 75 69 6c 64 20 4f 53     ... .[1mBuild OS
-    bddc:	3a 1b 5b 30 6d 20 20 20 20 20 20 4c 69 6e 75 78     :.[0m      Linux
-    bdec:	2d 33 2e 31 33 2e 30 2d 37 34 2d 67 65 6e 65 72     -3.13.0-74-gener
-    bdfc:	69 63 0d 0a 00 20 1b 5b 31 6d 41 72 63 68 69 74     ic... .[1mArchit
-    be0c:	65 63 74 75 72 65 3a 1b 5b 30 6d 20 20 61 72 6d     ecture:.[0m  arm
-    be1c:	0d 0a 00 20 1b 5b 31 6d 43 68 69 70 3a 1b 5b 30     ... .[1mChip:.[0
-    be2c:	6d 20 20 20 20 20 20 20 20 20 20 6d 6b 32 30 64     m          mk20d
-    be3c:	78 32 35 36 76 6c 68 37 0d 0a 00 20 1b 5b 31 6d     x256vlh7... .[1m
-    be4c:	43 50 55 3a 1b 5b 30 6d 20 20 20 20 20 20 20 20     CPU:.[0m        
-    be5c:	20 20 20 63 6f 72 74 65 78 2d 6d 34 0d 0a 00 20        cortex-m4... 
-    be6c:	1b 5b 31 6d 44 65 76 69 63 65 3a 1b 5b 30 6d 20     .[1mDevice:.[0m 
-    be7c:	20 20 20 20 20 20 20 4b 65 79 62 6f 61 72 64 0d            Keyboard.
-    be8c:	0a 00 20 1b 5b 31 6d 4d 6f 64 75 6c 65 73 3a 1b     .. .[1mModules:.
-    be9c:	5b 30 6d 20 20 20 20 20 20 20 53 63 61 6e 28 4d     [0m       Scan(M
-    beac:	44 45 72 67 6f 31 29 20 4d 61 63 72 6f 28 50 61     DErgo1) Macro(Pa
-    bebc:	72 74 69 61 6c 4d 61 70 29 20 4f 75 74 70 75 74     rtialMap) Output
-    becc:	28 70 6a 72 63 55 53 42 29 20 44 65 62 75 67 28     (pjrcUSB) Debug(
-    bedc:	66 75 6c 6c 29 0d 0a 00 20 1b 5b 31 6d 55 6e 69     full)... .[1mUni
-    beec:	71 75 65 20 49 64 3a 1b 5b 30 6d 20 20 20 20 20     que Id:.[0m     
-    befc:	00 1b 5b 31 3b 33 32 6d 49 4e 46 4f 1b 5b 30 6d     ..[1;32mINFO.[0m
-    bf0c:	20 2d 20 48 65 78 20 64 65 62 75 67 20 6d 6f 64      - Hex debug mod
-    bf1c:	65 20 64 69 73 61 62 6c 65 64 2e 2e 2e 0d 0a 00     e disabled......
-    bf2c:	1b 5b 31 3b 33 32 6d 49 4e 46 4f 1b 5b 30 6d 20     .[1;32mINFO.[0m 
-    bf3c:	2d 20 48 65 78 20 64 65 62 75 67 20 6d 6f 64 65     - Hex debug mode
-    bf4c:	20 65 6e 61 62 6c 65 64 2e 2e 2e 0d 0a 00 1b 5b      enabled.......[
-    bf5c:	00 31 3b 35 3b 33 31 00 45 52 52 4f 52 00 22 00     .1;5;31.ERROR.".
-    bf6c:	22 20 69 73 20 6e 6f 74 20 61 20 76 61 6c 69 64     " is not a valid
-    bf7c:	20 63 6f 6d 6d 61 6e 64 2e 2e 2e 74 79 70 65 20      command...type 
-    bf8c:	1b 5b 33 35 6d 68 65 6c 70 1b 5b 30 6d 00 1b 5b     .[35mhelp.[0m..[
-    bf9c:	31 3b 35 3b 33 31 6d 45 52 52 4f 52 1b 5b 30 6d     1;5;31mERROR.[0m
-    bfac:	20 2d 20 4d 61 78 20 6e 75 6d 62 65 72 20 6f 66      - Max number of
-    bfbc:	20 64 69 63 74 69 6f 6e 61 72 69 65 73 20 64 65      dictionaries de
-    bfcc:	66 69 6e 65 64 20 61 6c 72 65 61 64 79 2e 2e 2e     fined already...
-    bfdc:	0d 0a 00 1b 5b 32 4b 0d 00 1b 5b 31 3b 33 34 6d     ....[2K...[1;34m
-    bfec:	3a 1b 5b 30 6d 20 00 1b 5b 31 3b 35 3b 33 31 6d     :.[0m ..[1;5;31m
-    bffc:	45 52 52 4f 52 1b 5b 30 6d 20 2d 20 53 65 72 69     ERROR.[0m - Seri
-    c00c:	61 6c 20 6c 69 6e 65 20 62 75 66 66 65 72 20 69     al line buffer i
-    c01c:	73 20 66 75 6c 6c 2c 20 64 72 6f 70 70 69 6e 67     s full, dropping
-    c02c:	20 63 68 61 72 61 63 74 65 72 20 61 6e 64 20 72      character and r
-    c03c:	65 73 65 74 74 69 6e 67 2e 2e 2e 0d 0a 00 1b 5b     esetting.......[
-    c04c:	73 0d 0a 00 1b 5b 32 4b 00 1b 5b 75 00 08 20 08     s....[2K..[u.. .
-    c05c:	00 63 6c 65 61 72 00 63 6c 69 44 65 62 75 67 00     .clear.cliDebug.
-    c06c:	68 65 6c 70 00 6c 65 64 00 72 65 6c 6f 61 64 00     help.led.reload.
-    c07c:	72 65 73 65 74 00 72 65 73 74 61 72 74 00 76 65     reset.restart.ve
-    c08c:	72 73 69 6f 6e 00                                   rsion.
+    bc9c:	09 4b 65 79 62 6f 61 72 64 73 2f 49 43 45 44 2d     .Keyboards/ICED-
+    bcac:	4c 2f 62 75 69 6c 64 76 61 72 73 2e 68 0d 0a 09     L/buildvars.h...
+    bcbc:	4b 65 79 62 6f 61 72 64 73 2f 49 43 45 44 2d 4c     Keyboards/ICED-L
+    bccc:	2f 67 65 6e 65 72 61 74 65 64 4b 65 79 6d 61 70     /generatedKeymap
+    bcdc:	2e 68 0d 0a 09 4b 65 79 62 6f 61 72 64 73 2f 49     .h...Keyboards/I
+    bcec:	43 45 44 2d 4c 2f 6b 6c 6c 5f 64 65 66 73 2e 68     CED-L/kll_defs.h
+    bcfc:	0d 0a 09 4b 65 79 62 6f 61 72 64 73 2f 49 43 45     ...Keyboards/ICE
+    bd0c:	44 2d 52 2f 62 75 69 6c 64 76 61 72 73 2e 68 0d     D-R/buildvars.h.
+    bd1c:	0a 09 4b 65 79 62 6f 61 72 64 73 2f 49 43 45 44     ..Keyboards/ICED
+    bd2c:	2d 52 2f 67 65 6e 65 72 61 74 65 64 4b 65 79 6d     -R/generatedKeym
+    bd3c:	61 70 2e 68 0d 0a 09 4b 65 79 62 6f 61 72 64 73     ap.h...Keyboards
+    bd4c:	2f 49 43 45 44 2d 52 2f 6b 6c 6c 5f 64 65 66 73     /ICED-R/kll_defs
+    bd5c:	2e 68 0d 0a 00 20 1b 5b 31 6d 52 65 70 6f 20 4f     .h... .[1mRepo O
+    bd6c:	72 69 67 69 6e 3a 1b 5b 30 6d 20 20 20 68 74 74     rigin:.[0m   htt
+    bd7c:	70 73 3a 2f 2f 67 69 74 68 75 62 2e 63 6f 6d 2f     ps://github.com/
+    bd8c:	6b 69 69 62 6f 68 64 2f 63 6f 6e 74 72 6f 6c 6c     kiibohd/controll
+    bd9c:	65 72 2e 67 69 74 0d 0a 00 20 1b 5b 31 6d 43 6f     er.git... .[1mCo
+    bdac:	6d 6d 69 74 20 44 61 74 65 3a 1b 5b 30 6d 20 20     mmit Date:.[0m  
+    bdbc:	20 32 30 31 36 2d 30 31 2d 32 32 20 31 36 3a 30      2016-01-22 16:0
+    bdcc:	34 3a 35 33 20 2d 30 36 30 30 0d 0a 00 20 1b 5b     4:53 -0600... .[
+    bddc:	31 6d 43 6f 6d 6d 69 74 20 41 75 74 68 6f 72 3a     1mCommit Author:
+    bdec:	1b 5b 30 6d 20 70 63 65 31 39 39 31 20 3c 70 5f     .[0m pce1991 <p_
+    bdfc:	63 5f 65 79 65 40 79 61 68 6f 6f 2e 63 6f 6d 3e     c_eye@yahoo.com>
+    be0c:	0d 0a 00 20 1b 5b 31 6d 42 75 69 6c 64 20 44 61     ... .[1mBuild Da
+    be1c:	74 65 3a 1b 5b 30 6d 20 20 20 20 32 30 31 36 2d     te:.[0m    2016-
+    be2c:	30 31 2d 32 32 20 32 33 3a 32 32 3a 35 37 20 2d     01-22 23:22:57 -
+    be3c:	30 36 30 30 0d 0a 00 20 1b 5b 31 6d 42 75 69 6c     0600... .[1mBuil
+    be4c:	64 20 4f 53 3a 1b 5b 30 6d 20 20 20 20 20 20 4c     d OS:.[0m      L
+    be5c:	69 6e 75 78 2d 33 2e 31 33 2e 30 2d 37 34 2d 67     inux-3.13.0-74-g
+    be6c:	65 6e 65 72 69 63 0d 0a 00 20 1b 5b 31 6d 41 72     eneric... .[1mAr
+    be7c:	63 68 69 74 65 63 74 75 72 65 3a 1b 5b 30 6d 20     chitecture:.[0m 
+    be8c:	20 61 72 6d 0d 0a 00 20 1b 5b 31 6d 43 68 69 70      arm... .[1mChip
+    be9c:	3a 1b 5b 30 6d 20 20 20 20 20 20 20 20 20 20 6d     :.[0m          m
+    beac:	6b 32 30 64 78 32 35 36 76 6c 68 37 0d 0a 00 20     k20dx256vlh7... 
+    bebc:	1b 5b 31 6d 43 50 55 3a 1b 5b 30 6d 20 20 20 20     .[1mCPU:.[0m    
+    becc:	20 20 20 20 20 20 20 63 6f 72 74 65 78 2d 6d 34            cortex-m4
+    bedc:	0d 0a 00 20 1b 5b 31 6d 44 65 76 69 63 65 3a 1b     ... .[1mDevice:.
+    beec:	5b 30 6d 20 20 20 20 20 20 20 20 4b 65 79 62 6f     [0m        Keybo
+    befc:	61 72 64 0d 0a 00 20 1b 5b 31 6d 4d 6f 64 75 6c     ard... .[1mModul
+    bf0c:	65 73 3a 1b 5b 30 6d 20 20 20 20 20 20 20 53 63     es:.[0m       Sc
+    bf1c:	61 6e 28 4d 44 45 72 67 6f 31 29 20 4d 61 63 72     an(MDErgo1) Macr
+    bf2c:	6f 28 50 61 72 74 69 61 6c 4d 61 70 29 20 4f 75     o(PartialMap) Ou
+    bf3c:	74 70 75 74 28 70 6a 72 63 55 53 42 29 20 44 65     tput(pjrcUSB) De
+    bf4c:	62 75 67 28 66 75 6c 6c 29 0d 0a 00 20 1b 5b 31     bug(full)... .[1
+    bf5c:	6d 55 6e 69 71 75 65 20 49 64 3a 1b 5b 30 6d 20     mUnique Id:.[0m 
+    bf6c:	20 20 20 20 00 1b 5b 31 3b 33 32 6d 49 4e 46 4f         ..[1;32mINFO
+    bf7c:	1b 5b 30 6d 20 2d 20 48 65 78 20 64 65 62 75 67     .[0m - Hex debug
+    bf8c:	20 6d 6f 64 65 20 64 69 73 61 62 6c 65 64 2e 2e      mode disabled..
+    bf9c:	2e 0d 0a 00 1b 5b 31 3b 33 32 6d 49 4e 46 4f 1b     .....[1;32mINFO.
+    bfac:	5b 30 6d 20 2d 20 48 65 78 20 64 65 62 75 67 20     [0m - Hex debug 
+    bfbc:	6d 6f 64 65 20 65 6e 61 62 6c 65 64 2e 2e 2e 0d     mode enabled....
+    bfcc:	0a 00 1b 5b 00 31 3b 35 3b 33 31 00 45 52 52 4f     ...[.1;5;31.ERRO
+    bfdc:	52 00 22 00 22 20 69 73 20 6e 6f 74 20 61 20 76     R."." is not a v
+    bfec:	61 6c 69 64 20 63 6f 6d 6d 61 6e 64 2e 2e 2e 74     alid command...t
+    bffc:	79 70 65 20 1b 5b 33 35 6d 68 65 6c 70 1b 5b 30     ype .[35mhelp.[0
+    c00c:	6d 00 1b 5b 31 3b 35 3b 33 31 6d 45 52 52 4f 52     m..[1;5;31mERROR
+    c01c:	1b 5b 30 6d 20 2d 20 4d 61 78 20 6e 75 6d 62 65     .[0m - Max numbe
+    c02c:	72 20 6f 66 20 64 69 63 74 69 6f 6e 61 72 69 65     r of dictionarie
+    c03c:	73 20 64 65 66 69 6e 65 64 20 61 6c 72 65 61 64     s defined alread
+    c04c:	79 2e 2e 2e 0d 0a 00 1b 5b 32 4b 0d 00 1b 5b 31     y.......[2K...[1
+    c05c:	3b 33 34 6d 3a 1b 5b 30 6d 20 00 1b 5b 31 3b 35     ;34m:.[0m ..[1;5
+    c06c:	3b 33 31 6d 45 52 52 4f 52 1b 5b 30 6d 20 2d 20     ;31mERROR.[0m - 
+    c07c:	53 65 72 69 61 6c 20 6c 69 6e 65 20 62 75 66 66     Serial line buff
+    c08c:	65 72 20 69 73 20 66 75 6c 6c 2c 20 64 72 6f 70     er is full, drop
+    c09c:	70 69 6e 67 20 63 68 61 72 61 63 74 65 72 20 61     ping character a
+    c0ac:	6e 64 20 72 65 73 65 74 74 69 6e 67 2e 2e 2e 0d     nd resetting....
+    c0bc:	0a 00 1b 5b 73 0d 0a 00 1b 5b 32 4b 00 1b 5b 75     ...[s....[2K..[u
+    c0cc:	00 08 20 08 00 63 6c 65 61 72 00 63 6c 69 44 65     .. ..clear.cliDe
+    c0dc:	62 75 67 00 68 65 6c 70 00 6c 65 64 00 72 65 6c     bug.help.led.rel
+    c0ec:	6f 61 64 00 72 65 73 65 74 00 72 65 73 74 61 72     oad.reset.restar
+    c0fc:	74 00 76 65 72 73 69 6f 6e 00                       t.version.
 
-0000c092 <resetCLIDict_DescEntry>:
-    c092:	52 65 73 65 74 73 20 74 68 65 20 74 65 72 6d 69     Resets the termi
-    c0a2:	6e 61 6c 20 62 61 63 6b 20 74 6f 20 69 6e 69 74     nal back to init
-    c0b2:	69 61 6c 20 73 65 74 74 69 6e 67 73 2e 00           ial settings..
+0000c106 <resetCLIDict_DescEntry>:
+    c106:	52 65 73 65 74 73 20 74 68 65 20 74 65 72 6d 69     Resets the termi
+    c116:	6e 61 6c 20 62 61 63 6b 20 74 6f 20 69 6e 69 74     nal back to init
+    c126:	69 61 6c 20 73 65 74 74 69 6e 67 73 2e 00           ial settings..
 
-0000c0c0 <basicCLIDict>:
-    c0c0:	5d c0 00 00 8f bb 00 00 59 70 00 00 63 c0 00 00     ].......Yp..c...
-    c0d0:	d3 c1 00 00 35 72 00 00 6c c0 00 00 30 bb 00 00     ....5r..l...0...
-    c0e0:	95 70 00 00 71 c0 00 00 2c c1 00 00 49 71 00 00     .p..q...,...Iq..
-    c0f0:	75 c0 00 00 a1 bb 00 00 65 70 00 00 7c c0 00 00     u.......ep..|...
-    c100:	92 c0 00 00 89 70 00 00 82 c0 00 00 48 bb 00 00     .....p......H...
-    c110:	5d 71 00 00 8a c0 00 00 cc bb 00 00 61 71 00 00     ]q..........aq..
-    c120:	00 00 00 00 00 00 00 00 00 00 00 00                 ............
+0000c134 <basicCLIDict>:
+    c134:	d1 c0 00 00 8f bb 00 00 59 70 00 00 d7 c0 00 00     ........Yp......
+    c144:	47 c2 00 00 35 72 00 00 e0 c0 00 00 30 bb 00 00     G...5r......0...
+    c154:	95 70 00 00 e5 c0 00 00 a0 c1 00 00 49 71 00 00     .p..........Iq..
+    c164:	e9 c0 00 00 a1 bb 00 00 65 70 00 00 f0 c0 00 00     ........ep......
+    c174:	06 c1 00 00 89 70 00 00 f6 c0 00 00 48 bb 00 00     .....p......H...
+    c184:	5d 71 00 00 fe c0 00 00 cc bb 00 00 61 71 00 00     ]q..........aq..
+    c194:	00 00 00 00 00 00 00 00 00 00 00 00                 ............
 
-0000c12c <ledCLIDict_DescEntry>:
-    c12c:	45 6e 61 62 6c 65 73 2f 44 69 73 61 62 6c 65 73     Enables/Disables
-    c13c:	20 69 6e 64 69 63 61 74 6f 72 20 4c 45 44 2e 20      indicator LED. 
-    c14c:	54 72 79 20 61 20 63 6f 75 70 6c 65 20 74 69 6d     Try a couple tim
-    c15c:	65 73 20 6a 75 73 74 20 69 6e 20 63 61 73 65 20     es just in case 
-    c16c:	74 68 65 20 4c 45 44 20 69 73 20 69 6e 20 61 6e     the LED is in an
-    c17c:	20 6f 64 64 20 73 74 61 74 65 2e 0d 0a 09 09 1b      odd state......
-    c18c:	5b 33 33 6d 57 61 72 6e 69 6e 67 1b 5b 30 6d 3a     [33mWarning.[0m:
-    c19c:	20 4d 61 79 20 61 64 76 65 72 73 65 6c 79 20 61      May adversely a
-    c1ac:	66 66 65 63 74 20 73 6f 6d 65 20 6d 6f 64 75 6c     ffect some modul
-    c1bc:	65 73 2e 2e 2e 00                                   es....
+0000c1a0 <ledCLIDict_DescEntry>:
+    c1a0:	45 6e 61 62 6c 65 73 2f 44 69 73 61 62 6c 65 73     Enables/Disables
+    c1b0:	20 69 6e 64 69 63 61 74 6f 72 20 4c 45 44 2e 20      indicator LED. 
+    c1c0:	54 72 79 20 61 20 63 6f 75 70 6c 65 20 74 69 6d     Try a couple tim
+    c1d0:	65 73 20 6a 75 73 74 20 69 6e 20 63 61 73 65 20     es just in case 
+    c1e0:	74 68 65 20 4c 45 44 20 69 73 20 69 6e 20 61 6e     the LED is in an
+    c1f0:	20 6f 64 64 20 73 74 61 74 65 2e 0d 0a 09 09 1b      odd state......
+    c200:	5b 33 33 6d 57 61 72 6e 69 6e 67 1b 5b 30 6d 3a     [33mWarning.[0m:
+    c210:	20 4d 61 79 20 61 64 76 65 72 73 65 6c 79 20 61      May adversely a
+    c220:	66 66 65 63 74 20 73 6f 6d 65 20 6d 6f 64 75 6c     ffect some modul
+    c230:	65 73 2e 2e 2e 00                                   es....
 
-0000c1c2 <basicCLIDictName>:
-    c1c2:	47 65 6e 65 72 61 6c 20 43 6f 6d 6d 61 6e 64 73     General Commands
-    c1d2:	00                                                  .
+0000c236 <basicCLIDictName>:
+    c236:	47 65 6e 65 72 61 6c 20 43 6f 6d 6d 61 6e 64 73     General Commands
+    c246:	00                                                  .
 
-0000c1d3 <cliDebugCLIDict_DescEntry>:
-    c1d3:	45 6e 61 62 6c 65 73 2f 44 69 73 61 62 6c 65 73     Enables/Disables
-    c1e3:	20 68 65 78 20 6f 75 74 70 75 74 20 6f 66 20 74      hex output of t
-    c1f3:	68 65 20 6d 6f 73 74 20 72 65 63 65 6e 74 20 63     he most recent c
-    c203:	6c 69 20 69 6e 70 75 74 2e 00 00 00 00              li input.....
+0000c247 <cliDebugCLIDict_DescEntry>:
+    c247:	45 6e 61 62 6c 65 73 2f 44 69 73 61 62 6c 65 73     Enables/Disables
+    c257:	20 68 65 78 20 6f 75 74 70 75 74 20 6f 66 20 74      hex output of t
+    c267:	68 65 20 6d 6f 73 74 20 72 65 63 65 6e 74 20 63     he most recent c
+    c277:	6c 69 20 69 6e 70 75 74 2e 00 00 00 00              li input.....

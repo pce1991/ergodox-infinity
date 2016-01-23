@@ -29,7 +29,7 @@ U"LCTRL" : U"LALT";
 U"LALT" : U"LGUI";
 U"FUNCTION2" : U"LCTRL";
 
-U"HOME" : layerLatch(2);
+U"HOME" : layerLock(2);
 U"END" : layerLatch(1);
 
 ## Big Thumb Left
@@ -76,8 +76,8 @@ U"PERIOD" : U"B";
 U"SLASH" : U"L";
 
 ## Right Thumb
-U"PAGEUP" : layerLatch(1);
-U"PAGEDOWN" : layerLatch(2);
+U"PAGEUP" : layerLock(2);
+U"PAGEDOWN" : layerLatch(1);
 U"ENTER" : U"ENTER";
 U"SPACE" : U"SPACE";
 U"LEFT" : layerShift(1);

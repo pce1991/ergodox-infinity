@@ -30,19 +30,19 @@
 // You can change these to give your code its own name.
 #define STR_MANUFACTURER        L"Kiibohd"
 #define STR_PRODUCT             L"Keyboard - MDErgo1 PartialMap pjrcUSB full"
-#define STR_SERIAL              L"Dirty master - 2016-01-13 15:04:45 -0800"
+#define STR_SERIAL              L"Dirty master - 2016-01-22 16:04:53 -0600"
 
 
 // Strings used in the CLI module
-#define CLI_Revision            "52c8ffc964c20b20c6b8e6a3b28eac62c5d5326b"
+#define CLI_Revision            "5e02a4b52f6ce4399f5d99a1fa4cfcf66cb28110"
 #define CLI_Branch              "master"
 #define CLI_ModifiedStatus      "Dirty"
-#define CLI_ModifiedFiles       "\r\n\tKeyboards/ergodox.bash\r\n\tKeyboards/infinity.bash"
+#define CLI_ModifiedFiles       "\r\n\tKeyboards/ICED-L/buildvars.h\r\n\tKeyboards/ICED-L/generatedKeymap.h\r\n\tKeyboards/ICED-L/kll_defs.h\r\n\tKeyboards/ICED-R/buildvars.h\r\n\tKeyboards/ICED-R/generatedKeymap.h\r\n\tKeyboards/ICED-R/kll_defs.h"
 #define CLI_RepoOrigin          "https://github.com/kiibohd/controller.git"
-#define CLI_CommitDate          "2016-01-13 15:04:45 -0800"
-#define CLI_CommitAuthor        "Jacob Alexander <jacob.alexander@virtualinstruments.com>"
+#define CLI_CommitDate          "2016-01-22 16:04:53 -0600"
+#define CLI_CommitAuthor        "pce1991 <p_c_eye@yahoo.com>"
 #define CLI_Modules             "Scan(MDErgo1) Macro(PartialMap) Output(pjrcUSB) Debug(full)"
-#define CLI_BuildDate           "2016-01-22 15:58:55 -0600"
+#define CLI_BuildDate           "2016-01-22 23:22:57 -0600"
 #define CLI_BuildOS             "Linux-3.13.0-74-generic"
 #define CLI_Arch                "arm"
 #define CLI_Chip                "mk20dx256vlh7"
